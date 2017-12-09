@@ -1,0 +1,19 @@
+{
+  "name": "mlar",
+  "version": "0.0.0",
+  "description": "Module Loader and Resolver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4y0/mlar.git"
+  },
+  "author": "4y0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4y0/mlar/issues"
+  },
+  "homepage": "https://github.com/4y0/mlar#readme"
+}
