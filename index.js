@@ -19,7 +19,8 @@ function resolve_require (module_alias) {
 	return require(require_path)
 }
 
-module.exports = function (module_aliases) {
+
+function mlar(module_aliases) {
 
 	if(!module_aliases) throw new Error('No Dependencies passed');
 
@@ -48,3 +49,16 @@ module.exports = function (module_aliases) {
 	return ret_value;
 
 }
+
+//Mounted require. module_alias = base_directory
+mlar.mreq = function (base_directory_alias, module_alias){
+
+	var base_directory = r[base_directory_alias];
+	if(!base_directory) throw new Error('Invalid directory alias passed');
+
+	var require_path = process.cwd() + "" + base_directory + "/" + module_alias;
+	return require(require_path);
+
+}
+
+module.exports = mlar;
